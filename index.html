@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no"
+    />
+    <meta name="theme-color" content="#f97316" />
+    <title>福气翻翻乐</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <header class="hero">
+          <p class="badge">适合微信打开 · 长辈友好 Demo</p>
+          <h1>福气翻翻乐</h1>
+          <p class="subtitle">翻开两张一样的福气牌，把 6 组都配对成功就赢啦。</p>
+        </header>
+
+        <section class="stats">
+          <div class="stat">
+            <span class="label">已配对</span>
+            <strong id="matchedCount">0 / 6</strong>
+          </div>
+          <div class="stat">
+            <span class="label">翻牌次数</span>
+            <strong id="movesCount">0</strong>
+          </div>
+        </section>
+
+        <section class="tips">
+          <p>玩法很简单：</p>
+          <ol>
+            <li>点开一张牌</li>
+            <li>再点开第二张牌</li>
+            <li>一样就留下，不一样会翻回去</li>
+          </ol>
+        </section>
+
+        <section class="board-wrap">
+          <div id="board" class="board" aria-label="福气翻翻乐卡牌区"></div>
+        </section>
+
+        <section class="actions">
+          <button id="restartBtn" class="primary-btn">重新开始</button>
+        </section>
+      </section>
+
+      <div class="modal hidden" id="modal">
+        <div class="modal-card">
+          <p class="badge">恭喜通关 🎉</p>
+          <h2>今天手气真不错</h2>
+          <p id="resultText" class="result-text"></p>
+          <button id="playAgainBtn" class="primary-btn">再玩一次</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
